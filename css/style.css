@@ -53,7 +53,7 @@ header{
     justify-items: center;
     align-items: center;
     grid-template-areas: 
-    ". titulo titulo mundo . . home continents footers ."
+    ". titulo titulo mundo . . home footers continents"
     ;
 
 }
@@ -187,7 +187,7 @@ main section h2{
     width: 15.0625rem;
 }
 
-.card{
+.cardd{
     width: 23.625rem;
     height: 24.375rem;
     padding: 0.25rem;
@@ -195,7 +195,8 @@ main section h2{
     
 }
 
-.card p{
+.cardd p{
+    margin-top: 0.5rem;
     width: 100%;
     height: 20%;
     overflow: auto;
@@ -220,7 +221,7 @@ li:hover{
     filter:grayscale(50%);
 }
 
-.card div:hover{
+.cardd div:hover{
     filter: grayscale(100%);
 }
 
@@ -334,11 +335,11 @@ footer h2{
     .elemen{
         margin-top: 14px;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
         grid-template-areas: 
         "afri ame"
-        "as" "eu"
+        "as eu"
         ;
         gap:0.5rem;
     }
@@ -371,11 +372,11 @@ footer h2{
         font-size: 1.25rem;
     }
 
-    .card{
+    .cardd{
         width: 17.5rem;
     }
 
-    .card p{
+    .cardd p{
         font-size: 0.75rem;
         
     }
