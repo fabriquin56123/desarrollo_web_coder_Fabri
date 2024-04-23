@@ -16,11 +16,6 @@ body {
     width: 100%;
 }
 
-.principal{
-    background-image: url("../assets/earth.jpg");
-    background-size: cover;
-    background-position: center;
-}
 
 p{
     font-size:14px;
@@ -30,49 +25,73 @@ p{
 
 header{
     background-color: black;
-    font-size: 22px;
+    font-size: 1.375rem;
     width:100%;
     text-align: center;
     position: sticky;
     top:0;
+    grid-area: "header";
 }
 
 #titulo{
     color: #0B60B0;
-    font-size: 40px;
+    font-size: 2.5rem;
 }
 
 .navbar a{
     text-decoration: none;
     color:#F0EDCF;
-    font-size: 22px;
-    padding: 16px;
+    font-size: 1.375rem;
+    padding: 1rem;
 }
 
 .navbar{
     text-align: center;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: 
+    ". titulo titulo mundo . . home continents footers ."
+    ;
+
 }
 
+
+#footers{
+    grid-area: footers;
+}
+
+
 #mundo{
-    margin-right: 400px;
-    margin-top: 12px;
+    grid-area: mundo;
+}
+
+#home{
+    grid-area: home;
+}
+
+#continents{
+    grid-area: continents;
 }
 
 #titulo{
-    margin-left: 8px;
-}
-
-.flexboxHeader{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-
+    grid-area: titulo;
 }
 
 
 
 /***********************MAIN***********************/
+
+.mainPrincipal{
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/earth.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
 
 main{
     width: 100%;
@@ -86,6 +105,7 @@ main{
 
 .flexboxMain{
     margin-top: 6.875rem;
+    grid-area: "main";
     display: flex;
     flex-wrap: wrap;
     justify-content:space-around;
@@ -112,54 +132,54 @@ main{
 }
 
 #presentation{
-    font-size: 80px;
+    font-size: 5rem;
     color: #000000;
     margin:0px;
 }
 
 #phrase{
-    font-size: 36px;
+    font-size: 2.25rem;
 }
 
 #phrase_author{
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 #offer{
-    font-size: 40px;
+    font-size: 2.5rem;
     color: #40A2D8;
 }
 
 .continents a{
     text-decoration: none;
     color:#F0EDCF;
-    font-size: 40px;
+    font-size: 2.5rem;
 }
 
 
 main section h2{
     display: inline-block;
     color: #40A2D8;
-    font-size: 24px;
+    font-size: 1.5rem;
     text-decoration: none;
     background-color: #0B60B0;
-    padding: 4px;
-    margin: 4px;
-    border-radius: 10px;
+    padding: 0.25rem;
+    margin: 0.25rem;
+    border-radius: 0.625rem;
 }
 
 .mundo h1{
-    margin:4px;
-    font-size: 40px;
+    margin:0.25rem;
+    font-size: 2.5rem;
 }
 
 .mundo{
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
 }
 
 .mundo p{
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .mundo img{
@@ -209,6 +229,18 @@ li:hover{
     filter:grayscale(50%);
 }
 
+.bContainer{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+}
 
 
 /***********************FOOTER***********************/
@@ -228,19 +260,124 @@ footer{
 
 footer h2{
     color: #40A2D8;
-    font-size: 26px;
+    font-size: 1.625rem;
 }
 
 
 
 .socialNet{
-    width: 44px; 
-    height: 44px;
+    width: 2.75rem; 
+    height: 2.75rem;
     background-color: #F0EDCF;
-    padding:8px;
+    padding:0.5rem;
 }
 
 .flexboxFooter{
+    grid-area: "footer";
     display: flex;
     justify-content: center;
+}
+
+
+/***********************MEDIA QUERIES***********************/
+
+@media (max-width: 420px){
+    
+
+    .navbar{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 2fr;
+
+        grid-template-areas: 
+        "titulo titulo mundo"
+        "home continents footers"
+        ;
+    
+    }
+
+    footer{
+        font-size: 0.5625rem;
+    }
+    
+    footer h2{
+        font-size: 0.8125rem;
+    }
+
+    
+    #slogan{
+        font-size: 0.875rem;
+        text-align: center;
+    }
+    
+    #presentation{
+        font-size: 3rem;
+        text-align: center;
+    }
+    
+    #phrase{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .intro{
+        height:12.5rem;
+        text-align: center;
+    }
+
+    
+    #offer{
+    font-size: 1.5rem;
+    color: black;
+    text-align: center;
+    }
+
+    .elemen{
+        margin-top: 14px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "afri ame"
+        "as" "eu"
+        ;
+        gap:0.5rem;
+    }
+
+    #afri{
+        grid-area: afri;
+        padding: 2px;
+        background-color: #0B60B0;
+    }
+
+    #ame{
+        grid-area: ame;
+        padding: 2px;
+        background-color: #0B60B0;
+    }
+
+    #as{
+        grid-area: as;
+        padding: 2px;
+        background-color: #0B60B0;
+    }
+
+    #eu{
+        grid-area: eu;
+        padding: 2px;
+        background-color: #0B60B0;
+    }
+
+    .continents a{
+        font-size: 1.25rem;
+    }
+
+    .card{
+        width: 17.5rem;
+    }
+
+    .card p{
+        font-size: 0.75rem;
+        
+    }
+
 }

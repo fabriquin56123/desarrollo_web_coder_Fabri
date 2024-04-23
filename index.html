@@ -7,59 +7,54 @@
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body class="principal">
-        <header class="navbar"> 
-            <section class="flexboxHeader">
-                <a href='' id="titulo">Travelover Guide</a>
-                <img src="./assets/mundo.png" id="mundo" alt="">
-                <a href='#'>Home</a>
-                <a href='#'>About us</a>
-                <a href='#footer'>Contact us</a>
-            </section>
-        </header>
-        <main>
-            <section class="flexboxMain">
-                <section class="intro">
-                    <p id="slogan">Wherever you go, we will go with you</p>
-                    <p id="presentation">WELCOME TO THE WORLD</p>
-                    <p id="phrase">“WHAT WE EXPLORE IS A DROP, WHAT WE DON’T EXPLORE IS AN OCEAN”</p>
-                    <p id="phrase_author">"ISAAC NEWTON AS A TRAVELER INSTEAD SCIENTIST”</p>
+        <div class="bContainer">
+            <header class="navbar"> 
+                <p id="titulo">Travelover Guide</p>
+                <img src="./assets/mundo.png" id="mundo" alt="Travelover's logo">
+                <a id = "home" href='#'>Home</a>
+                <a id = "continents" href='#'>Continents</a>
+                <a id = "footers" href='#footer'>Contact us</a>
+            </header>
+            <main class = "mainPrincipal">
+                <section class="flexboxMain">
+                    <section class="intro">
+                        <p id="slogan">Wherever you go, we will go with you</p>
+                        <p id="presentation">WELCOME TO THE WORLD</p>
+                        <p id="phrase">“WHAT WE EXPLORE IS A DROP, WHAT WE DON’T EXPLORE IS AN OCEAN”</p>
+                        <p id="phrase_author">"ISAAC NEWTON AS A TRAVELER INSTEAD SCIENTIST”</p>
+                    </section>
+                    <section class="continents">
+                        <p id="offer">WHERE DO YOU WANT TO TRAVEL?</p>
+                        <ul class="elemen">
+                            <li><a id="afri" href="./pages/africa.html">Africa</a></li>
+                            <li><a id="ame" href="./pages/america.html">America</a></li>
+                            <li><a id="as" href="./pages/asia.html">Asia</a></li>
+                            <li><a id="eu" href="./pages/europa.html">Europa</a></li>
+                        </ul>
+                    </section>
                 </section>
-                <section class="continents">
-                    <p id="offer">WHERE DO YOU WANT TO TRAVEL?</p>
-                    <ul class="elemen">
-                        <li><a href="./pages/africa.html">Africa</a></li>
-                        <li><a href="./pages/america.html">America</a></li>
-                        <li><a href="./pages/asia.html">Asia</a></li>
-                        <li><a href="./pages/europa.html">Europa</a></li>
-                    </ul>
-                </section>
-            </section>
-        </main>
-        <footer id="footer">
-            <section class="flexboxFooter">
-                <section class = "cardf">
-                    <h2>Contact us</h2>
-                        <h3>Address: 123 Main Street, Anytown, USA, 12345</h3>
-                        <h3>Email: info@example.com</h3>
-                </section>
+            </main>
+            <footer id="footer">
+                <section class="flexboxFooter">
+                    <section class = "cardf">
+                        <h2>Contact us</h2>
+                            <h3>Address: 123 Main Street, Anytown, USA, 12345</h3>
+                            <h3>Email: info@example.com</h3>
+                    </section>
 
-                <section class="cardf">
-                    <h2>Our social network</h2>
-                        <img src="./assets/gorjeo.png" class ="socialNet" alt="">
-                        <img src="./assets/whatsapp.png" class="socialNet" alt="">
-                        <img src="./assets/instagram.png" class="socialNet" alt="">
-                        <img src="./assets/simbolo-de-la-aplicacion-de-facebook.png" class="socialNet" alt="">
-                </section>
+                    <section class="cardf">
+                        <h2>Our social network</h2>
+                            <img src="./assets/gorjeo.png" class ="socialNet" alt="X account">
+                            <img src="./assets/whatsapp.png" class="socialNet" alt="Whatsapp contact">
+                            <img src="./assets/instagram.png" class="socialNet" alt="Instagram account">
+                            <img src="./assets/simbolo-de-la-aplicacion-de-facebook.png" class="socialNet" alt="Facebook official page">
+                    </section>
 
-                <section class="cardf">
-                <h2>Suscribe in our newsletter</h2>
-                <form action="">
-                    <fieldset>
-                        <input type="email" placeholder="Enter your Email" id="email">
-                    </fieldset>
-                </form>
+                    <section class="cardf">
+                    <h2>Suscribe in our newsletter</h2>
+                    </section>
                 </section>
-            </section>
-        </footer>
+            </footer>
+        </div>
     </body>
 </html>
