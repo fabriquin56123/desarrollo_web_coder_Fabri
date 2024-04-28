@@ -1,0 +1,54 @@
+header{
+    background-color: map-get($colores,negro);
+    font-size: 1.375rem;
+    width:100%;
+    text-align: center;
+    position: sticky;
+    top:0;
+    grid-area: "header";
+}
+
+
+.navbar{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: 
+    ". titulo titulo mundo . . home footers continents"
+    ;
+    a{
+        text-decoration: none;
+        color:map-get($colores,crema);
+        font-size: 1.375rem;
+        padding: 1rem;
+    }       
+}
+
+
+#titulo{
+    color: map-get($colores,azulMarino);
+    font-size: 2.5rem;
+}
+#footers{
+    grid-area: footers;
+}
+
+#mundo{
+    grid-area: mundo;
+}
+
+#home{
+    grid-area: home;
+}
+
+#continents{
+    grid-area: continents;
+}
+
+#titulo{
+    grid-area: titulo;
+}
+

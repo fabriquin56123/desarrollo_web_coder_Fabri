@@ -1,0 +1,31 @@
+.cardf{
+    width: 30%;
+    margin: 8px;
+}
+
+footer{
+    color: map-get($colores,crema);
+    font-size: 18px;
+    background-color: map-get($colores,negro);
+    padding:0.5rem;
+    width:100%;
+
+    h2{
+        color: map-get($colores,celeste);
+        font-size: 1.625rem;
+    }
+    
+}
+
+.socialNet{
+    width: 2.75rem; 
+    height: 2.75rem;
+    background-color: map-get($colores,crema);
+    padding:0.5rem;
+}
+
+.flexboxFooter{
+    grid-area: "footer";
+    display: flex;
+    justify-content: center;
+}

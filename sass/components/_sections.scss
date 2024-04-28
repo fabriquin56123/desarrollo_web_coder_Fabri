@@ -1,0 +1,44 @@
+.mundo{
+    text-align: center;
+    margin-bottom: 0.5rem;
+    h1{
+        margin:1rem;
+        font-size: 2.5rem;
+    }
+    p{
+        font-size: 0.75rem;
+    }
+
+    img{
+        height: 14.6875rem;
+        width: 15.0625rem;
+    }
+
+}
+
+.flexbox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+
+.cardd{
+    width: 23.625rem;
+    height: 26.25rem;
+    padding: 0.25rem;
+    margin:1rem;
+
+    p{
+        margin-top: 0.5rem;
+        width: 100%;
+        height: 30%;
+        overflow: auto;
+        font-size: 0.875rem;
+    }
+    
+    div:hover{
+        filter: grayscale(100%);
+    }
+}

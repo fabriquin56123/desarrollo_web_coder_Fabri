@@ -1,0 +1,23 @@
+/*archivos utilities*/
+
+@import "./utilities/maps.scss";
+
+/*reset*/
+
+@import "./base/reset";
+@import "./base/tipografia";
+@import "./base/generales";
+
+/*layout*/
+
+@import "./layout/header";
+@import "./layout/main-index";
+@import "./layout/footer";
+
+/*components*/
+
+@import "./components/sections";
+
+/*mediaqueries*/
+
+@import "./layout/mediaQueries.scss/mediaQuerie420px.scss";

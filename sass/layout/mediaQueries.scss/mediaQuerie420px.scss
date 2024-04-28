@@ -1,0 +1,101 @@
+@media (max-width: 420px){
+    
+
+    .navbar{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 2fr;
+
+        grid-template-areas: 
+        "titulo titulo mundo"
+        "home continents footers"
+        ;
+    
+    }
+
+    footer{
+        font-size: 0.5625rem;
+        h2{
+            font-size: 0.8125rem;
+        }
+    }
+    
+
+    
+    #slogan{
+        font-size: 0.875rem;
+        text-align: center;
+    }
+    
+    #presentation{
+        font-size: 3rem;
+        color: map-get($colores,crema);
+        text-align: center;
+    }
+    
+    #phrase{
+        font-size: 1.5rem;
+        color: map-get($colores,azulMarino);
+        text-align: center;
+    }
+
+    .intro{
+        height:12.5rem;
+        text-align: center;
+    }
+
+    
+    #offer{
+        font-size: 1.5rem;
+        color: map-get($colores,negro);
+        text-align: center;
+    }
+
+    .elemen{
+        margin-top: 14px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "afri ame"
+        "as eu"
+        ;
+        gap:0.5rem;
+    }
+
+    #afri{
+        grid-area: afri;
+        padding: 2px;
+        background-color: map-get($colores,azulMarino);
+    }
+
+    #ame{
+        grid-area: ame;
+        padding: 2px;
+        background-color: map-get($colores,azulMarino);
+    }
+
+    #as{
+        grid-area: as;
+        padding: 2px;
+        background-color: map-get($colores,azulMarino);
+    }
+
+    #eu{
+        grid-area: eu;
+        padding: 2px;
+        background-color: map-get($colores,azulMarino);
+    }
+
+    .continents a{
+        font-size: 1.25rem;
+    }
+
+    .cardd{
+        width: 17.5rem;
+        p{
+            font-size: 0.75rem;
+            
+        }
+    }
+
+}

@@ -1,0 +1,93 @@
+main{
+    width: 100%;
+    height: 100%;
+
+    section h2{
+        display: inline-block;
+        color: map-get($colores,celeste);
+        font-size: 1.5rem;
+        text-decoration: none;
+        background-color: map-get($colores,azulMarino);
+        padding: 0.25rem;
+        margin: 0.25rem;
+        border-radius: 0.625rem;
+    }
+}
+
+.mainPrincipal{
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/earth.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#mundo{
+    width: 46px;
+    height: 46px; 
+}
+
+.flexboxMain{
+    margin-top: 6.875rem;
+    grid-area: "main";
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.intro{
+    color:map-get($colores,crema);
+    width:31.25rem;
+    height:31.25rem;
+    padding: 16px;
+}
+
+.continents{
+    width: 26.875rem;
+    height: 31.25rem;
+    justify-content: right;
+    padding: 16px;
+
+    a{
+        text-decoration: none;
+        color:map-get($colores,crema);
+        font-size: 2.5rem;
+    }
+
+    ul{
+        text-align: center;
+        list-style: none;
+
+        li:hover{
+            font-weight: bold;
+            filter:grayscale(50%);
+        }
+    }
+}
+
+#slogan{
+    font-size: 24px;
+    color: map-get($colores,celeste);
+}
+
+#presentation{
+    font-size: 5rem;
+    color: map-get($colores,crema);
+    margin:0px;
+}
+
+#phrase{
+    font-size: 2.25rem;
+    color: map-get($colores,azulMarino);
+}
+
+#phrase_author{
+    font-size: 1.125rem;
+}
+
+#offer{
+    font-size: 2.5rem;
+    color: map-get($colores,celeste);
+}
+
