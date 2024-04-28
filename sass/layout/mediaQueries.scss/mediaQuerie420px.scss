@@ -2,13 +2,8 @@
     
 
     .navbar{
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 2fr;
-
-        grid-template-areas: 
-        "titulo titulo mundo"
-        "home continents footers"
-        ;
+        @include grid(repeat(3, 1fr), 2fr, "titulo titulo mundo"
+        "home continents footers", 0px);
     
     }
 
@@ -22,20 +17,29 @@
 
     
     #slogan{
-        font-size: 0.875rem;
+        grid-area: sl;
+        font-size: 1.125rem;
         text-align: center;
     }
     
     #presentation{
+        grid-area: pres;
         font-size: 3rem;
         color: map-get($colores,crema);
         text-align: center;
     }
     
     #phrase{
+        grid-area: phras;
         font-size: 1.5rem;
-        color: map-get($colores,azulMarino);
+        color: map-get($colores,celeste);
         text-align: center;
+    }
+
+    #phrase_author{
+        grid-area: phrase_a;
+        color: map-get($colores, negro );
+
     }
 
     .intro{
@@ -51,15 +55,8 @@
     }
 
     .elemen{
-        margin-top: 14px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-        grid-template-areas: 
-        "afri ame"
-        "as eu"
-        ;
-        gap:0.5rem;
+        margin-top: 1.5rem;
+        @include grid(repeat(2, 1fr),1fr, "afri ame" "as eu", 0.5rem);
     }
 
     #afri{
@@ -86,16 +83,47 @@
         background-color: map-get($colores,azulMarino);
     }
 
-    .continents a{
-        font-size: 1.25rem;
+    .continents{
+        width: 100%;
+        height: 18.75rem;
+        grid-area: "continents";
+        justify-content: center;
+        a{
+            font-size: 1.25rem;
+        }
+    
     }
-
+    
     .cardd{
         width: 17.5rem;
         p{
             font-size: 0.75rem;
             
         }
+    }
+
+    .intro{
+        height:100%;
+        grid-area: intro;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr, 2fr, 2fr, 1fr;
+        grid-template-areas: 
+        "sl"
+        "pres"
+        "phras"
+        "phrase_a"
+        ;
+        gap:0.5rem;
+    }
+
+    .flexboxMain{
+        margin-top: 1.875rem;
+        @include grid(1fr, repeat(2,1fr),"intro" "continents", 0px);
+    }
+
+    h3{
+        font-size: 0.875rem;
     }
 
 }

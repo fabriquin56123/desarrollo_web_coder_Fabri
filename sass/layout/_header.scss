@@ -6,6 +6,10 @@ header{
     position: sticky;
     top:0;
     grid-area: "header";
+    a:hover{
+        font-weight: bold;
+        filter:grayscale(50%);
+    }
 }
 
 

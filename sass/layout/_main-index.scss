@@ -28,10 +28,10 @@ main{
 }
 
 .flexboxMain{
+    @include flex;
     margin-top: 6.875rem;
+    margin-bottom: 1.875rem;
     grid-area: "main";
-    display: flex;
-    flex-wrap: wrap;
     justify-content:space-around;
     align-items: center;
 }
@@ -67,14 +67,13 @@ main{
 }
 
 #slogan{
-    font-size: 24px;
+    font-size: 1.5rem;
     color: map-get($colores,celeste);
 }
 
 #presentation{
     font-size: 5rem;
     color: map-get($colores,crema);
-    margin:0px;
 }
 
 #phrase{
@@ -83,7 +82,8 @@ main{
 }
 
 #phrase_author{
-    font-size: 1.125rem;
+    @extend #slogan;
+
 }
 
 #offer{

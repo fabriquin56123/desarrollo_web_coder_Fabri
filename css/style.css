@@ -14,12 +14,13 @@ body {
     font-size: 0.875rem; }
 
 .bContainer {
-  display: grid;
   width: 100%;
   height: 100vh;
+  display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
-  grid-template-areas: "header" "main" "footer"; }
+  grid-template-areas: "header" "main" "footer";
+  gap: 0px; }
 
 /*layout*/
 header {
@@ -30,6 +31,9 @@ header {
   position: sticky;
   top: 0;
   grid-area: "header"; }
+  header a:hover {
+    font-weight: bold;
+    filter: grayscale(50%); }
 
 .navbar {
   text-align: center;
@@ -89,10 +93,12 @@ main {
   height: 46px; }
 
 .flexboxMain {
-  margin-top: 6.875rem;
-  grid-area: "main";
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 6.875rem;
+  margin-bottom: 1.875rem;
+  grid-area: "main";
   justify-content: space-around;
   align-items: center; }
 
@@ -118,21 +124,17 @@ main {
       font-weight: bold;
       filter: grayscale(50%); }
 
-#slogan {
-  font-size: 24px;
+#slogan, #phrase_author {
+  font-size: 1.5rem;
   color: #40A2D8; }
 
 #presentation {
   font-size: 5rem;
-  color: #F0EDCF;
-  margin: 0px; }
+  color: #F0EDCF; }
 
 #phrase {
   font-size: 2.25rem;
   color: #0B60B0; }
-
-#phrase_author {
-  font-size: 1.125rem; }
 
 #offer {
   font-size: 2.5rem;
@@ -159,8 +161,8 @@ footer {
   padding: 0.5rem; }
 
 .flexboxFooter {
-  grid-area: "footer";
   display: flex;
+  flex-wrap: wrap;
   justify-content: center; }
 
 /*components*/
@@ -183,7 +185,7 @@ footer {
 
 .cardd {
   width: 23.625rem;
-  height: 26.25rem;
+  height: 28.125rem;
   padding: 0.25rem;
   margin: 1rem; }
   .cardd p {
@@ -198,24 +200,32 @@ footer {
 /*mediaqueries*/
 @media (max-width: 420px) {
   .navbar {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 2fr;
-    grid-template-areas: "titulo titulo mundo" "home continents footers"; }
+    grid-template-areas: "titulo titulo mundo" "home continents footers";
+    gap: 0px; }
   footer {
     font-size: 0.5625rem; }
     footer h2 {
       font-size: 0.8125rem; }
-  #slogan {
-    font-size: 0.875rem;
+  #slogan, #phrase_author {
+    grid-area: sl;
+    font-size: 1.125rem;
     text-align: center; }
   #presentation {
+    grid-area: pres;
     font-size: 3rem;
     color: #F0EDCF;
     text-align: center; }
   #phrase {
+    grid-area: phras;
     font-size: 1.5rem;
-    color: #0B60B0;
+    color: #40A2D8;
     text-align: center; }
+  #phrase_author {
+    grid-area: phrase_a;
+    color: #000000; }
   .intro {
     height: 12.5rem;
     text-align: center; }
@@ -224,11 +234,11 @@ footer {
     color: #000000;
     text-align: center; }
   .elemen {
-    margin-top: 14px;
+    margin-top: 1.5rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
-    grid-template-areas: "afri ame" "as eu";
+    grid-template-areas: "afri ame" "as eu";
     gap: 0.5rem; }
   #afri {
     grid-area: afri;
@@ -246,9 +256,31 @@ footer {
     grid-area: eu;
     padding: 2px;
     background-color: #0B60B0; }
-  .continents a {
-    font-size: 1.25rem; }
+  .continents {
+    width: 100%;
+    height: 18.75rem;
+    grid-area: "continents";
+    justify-content: center; }
+    .continents a {
+      font-size: 1.25rem; }
   .cardd {
     width: 17.5rem; }
     .cardd p {
-      font-size: 0.75rem; } }
+      font-size: 0.75rem; }
+  .intro {
+    height: 100%;
+    grid-area: intro;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 2fr, 2fr, 1fr;
+    grid-template-areas: "sl" "pres" "phras" "phrase_a";
+    gap: 0.5rem; }
+  .flexboxMain {
+    margin-top: 1.875rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "intro" "continents";
+    gap: 0px; }
+  h3 {
+    font-size: 0.875rem; } }

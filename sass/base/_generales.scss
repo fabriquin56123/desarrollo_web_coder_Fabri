@@ -9,15 +9,10 @@ body {
 }
 
 .bContainer{
-    display: grid;
     width: 100%;
     height: 100vh;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: 
-    "header"
+    @include grid(1fr, auto auto auto, "header"
     "main"
-    "footer"
-    ;
+    "footer", 0px);
 }
 
