@@ -36,9 +36,16 @@
         height: 30%;
         overflow: auto;
         font-size: 0.875rem;
+        padding:0.75rem;
+        background-image: linear-gradient(to right bottom, #f0edcf, #e9e6ca, #e1dec5, #dad7c0, #d3d0bb, #cecbb6, #c8c6b2, #c3c1ad, #bfbda7, #bbb8a1, #b7b49b, #b3b095);
     }
     
     div:hover{
         filter: grayscale(100%);
+    }
+
+    h2{
+        background-image: linear-gradient(to right bottom, #421dcb, #5130ce, #5e3fd0, #6a4ed2, #765cd4, #6270e1, #4e82eb, #3b92f1, #00a9f7, #00bcf3, #00cde8, #3edcdb);
+        color: #292146;
     }
 }

@@ -130,7 +130,10 @@ main {
 
 #presentation {
   font-size: 5rem;
-  color: #F0EDCF; }
+  background-image: linear-gradient(to right top, #f0edcf, #c8e0c0, #9cd1bd, #71c1c2, #55adc9, #459ec9, #438dc6, #4f7bbf, #3f6ebb, #2e61b6, #1b54b1, #0047ab);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; }
 
 #phrase {
   font-size: 2.25rem;
@@ -139,6 +142,18 @@ main {
 #offer {
   font-size: 2.5rem;
   color: #40A2D8; }
+
+.africa {
+  background-image: linear-gradient(to left top, #3ed82f, #00d762, #00d485, #00d0a1, #00cbb4, #00c4cc, #00badd, #00aee5, #5996ea, #9c76d4, #c74ea2, #d3295d); }
+
+.america {
+  background-image: linear-gradient(to top, #3411b5, #004fd7, #0077ea, #009cf3, #00bdf5, #00c7e2, #00cebf, #47d093, #81b847, #b19800, #d96b00, #f0173d); }
+
+.asia {
+  background-image: linear-gradient(to left, #250fbc, #004ed8, #0073e1, #0091de, #00add6, #00bdd5, #00cbc9, #00d8b5, #00dfa0, #00e582, #00e959, #28ec0a); }
+
+.europa {
+  background-image: linear-gradient(to right bottom, #3529c2, #3147cc, #3960d3, #4b76d6, #628bd7, #6496d8, #6aa0d8, #74a9d7, #65abd6, #54add4, #44afd0, #33b1cb); }
 
 .cardf {
   width: 30%;
@@ -193,9 +208,14 @@ footer {
     width: 100%;
     height: 30%;
     overflow: auto;
-    font-size: 0.875rem; }
+    font-size: 0.875rem;
+    padding: 0.75rem;
+    background-image: linear-gradient(to right bottom, #f0edcf, #e9e6ca, #e1dec5, #dad7c0, #d3d0bb, #cecbb6, #c8c6b2, #c3c1ad, #bfbda7, #bbb8a1, #b7b49b, #b3b095); }
   .cardd div:hover {
     filter: grayscale(100%); }
+  .cardd h2 {
+    background-image: linear-gradient(to right bottom, #421dcb, #5130ce, #5e3fd0, #6a4ed2, #765cd4, #6270e1, #4e82eb, #3b92f1, #00a9f7, #00bcf3, #00cde8, #3edcdb);
+    color: #292146; }
 
 /*mediaqueries*/
 @media (max-width: 420px) {

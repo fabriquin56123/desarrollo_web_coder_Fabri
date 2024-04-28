@@ -73,7 +73,10 @@ main{
 
 #presentation{
     font-size: 5rem;
-    color: map-get($colores,crema);
+    background-image: linear-gradient(to right top, #f0edcf, #c8e0c0, #9cd1bd, #71c1c2, #55adc9, #459ec9, #438dc6, #4f7bbf, #3f6ebb, #2e61b6, #1b54b1, #0047ab);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 #phrase{
